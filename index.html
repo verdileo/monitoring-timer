@@ -8,16 +8,24 @@
 const URL_API="https://script.google.com/macros/s/AKfycbzTEX_2oqhvVtcY7eUC5JDpvOp_nCnrChfFTnPfBV1gKeCc864OcZ2jzyzwAjsIPYxe/exec";
 const E=[["PT01", "PT Indovest Panorama Busana", "Opini", "Verdi", "Andre", "Diana Afifah", "Naufal Agustian"], ["SWPI", "PT Sentralwatch Perkasa Internasional", "Opini", "Verdi", "Jaka", "Andreas", "Rio Zaputra"], ["MPI", "PT Moda Perkasa Internasional", "Opini", "Verdi", "Andre", "Suci Wulandari", "Muh. Farras"], ["API", "PT Adara Prima Internasional", "Opini", "Verdi", "Jaka", "Suci Wulandari", "Anita Febri"], ["GAI", "PT Graha Abadi International", "Opini", "Verdi", "Jaka", "Andreas", "Anita Febri"], ["SI", "PT Seacliff International", "Opini", "Verdi", "Andre", "Muh. Rahadian", "Naufal Agustian"], ["DSM", "PT Dinamika Sukses Mulia", "Worksheet Saja", "Verdi", "-", "Diana Afifah", "Naufal Agustian"], ["IMK", "PT Indah Mahakarya Kreasi", "Worksheet Saja", "Verdi", "-", "Muh. Rahadian", "Muh. Farras"], ["IPS", "PT Indotime Perkasa Sejahtera", "Worksheet Saja", "Verdi", "-", "Dewi Lestari", "Naufal Agustian"], ["PEI", "PT Prima Elok Internasional", "Worksheet Saja", "Verdi", "-", "Dewi Lestari", "Anita Febri"], ["TBI", "PT Tiara Busana Indonesia", "Opini", "Achmad", "Andre", "Indah Purnamasari", "Putri Andini"], ["JMB", "PT Jalan Makmur Bersama", "Opini", "Achmad", "Jaka", "Diana Afifah", "Sofian Santosa"], ["SSB", "PT Sukses Sejahtera Busana", "Opini", "Achmad", "Jaka", "Dewi Lestari", "Aisyah Nurfaidah"], ["KPI", "PT Komunikasi Perkasa Internasional", "Opini", "Achmad", "Andre", "Dinda Azzahra", "Widya Aryni"], ["PRKI", "PT Pramodha Kreasi Indah", "Tanpa Opini", "Achmad", "-", "Suci Wulandari", "Muh. Farras"], ["IPL", "PT Indah Perkasa Internasional", "Opini", "Achmad", "Andre", "Dewi Lestari", "Muh. Farras"], ["CKI", "PT Cipta Kreasi Investindo", "Opini", "Achmad", "-", "Andreas", "Sofian Santosa"], ["CMI", "PT Cipta Mulia Investama", "Opini", "Achmad", "-", "Diana Afifah", "Rio Zaputra"], ["AUI", "PT Angkasa Utama International", "Opini", "Achmad", "-", "Muh. Rahadian", "Putri Andini"], ["RPI", "PT Restorindo Perkasa Internasional", "Tanpa Opini", "Achmad", "-", "Indah Purnamasari", "Putri Andini"], ["RDM", "PT Roda Dinamika Maju", "Tanpa Opini", "Achmad", "-", "Indah Purnamasari", "Widya Aryni"], ["MCI", "PT Manna Corporindo Indonesia", "Opini", "Achmad", "-", "Muh. Rahadian", "Widya Aryni"], ["TIV", "PT Time Investindo", "Tanpa Opini", "Achmad", "-", "Dewi Lestari", "Haikal Rafif"], ["TPI", "PT Terang Perkasa Indah", "Opini", "Achmad", "-", "Dinda Azzahra", "Haikal Rafif"], ["TPP", "PT Terang Pramitha Persada", "Opini", "Achmad", "-", "Dinda Azzahra", "Aisyah Nurfaidah"], ["ISP", "PT Indah Sarana Perkasa", "Worksheet Saja", "Achmad", "-", "Muh. Rahadian", "Aisyah Nurfaidah"], ["NAI", "PT Nirwana Abadi Internasional", "Worksheet Saja", "Achmad", "-", "Dinda Azzahra", "Sofian Santosa"], ["CHM", "PT Cahaya Harapan Mulia", "Worksheet Saja", "Achmad", "-", "Dinda Azzahra", "Rio Zaputra"], ["TMB", "PT Timerinvest Matra Busana", "Worksheet Saja", "Achmad", "-", "Indah Purnamasari", "Aisyah Nurfaidah"], ["GBI", "PT Gaya Busana Indah", "Worksheet Saja", "Achmad", "-", "Dinda Azzahra", "Haikal Rafif"], ["PEUI", "PT Permata Utama Internasional", "Worksheet Saja", "Achmad", "-", "Muh. Rahadian", "Muh. Farras"], ["PRUI", "PT Prima Utama Internasional", "Worksheet Saja", "Achmad", "-", "Indah Purnamasari", "Putri Andini"], ["IGI", "PT Indah Gemilang Internasional", "Worksheet Saja", "Achmad", "-", "Muh. Rahadian", "Sofian Santosa"], ["EPI", "PT Elektrindo Perkasa Internasional", "Worksheet Saja", "Achmad", "-", "Muh. Rahadian", "Haikal Rafif"]].map(r=>({c:r[0],n:r[1],k:r[2],m:r[3],s:r[4],sn:r[5],a:r[6]}));
 const PH={interim:{t:"Interim 31 Okt",s:[["WS Review by Supervisor", 0], ["WS Review by Manager", 0], ["WS Review by EP", 0], ["Report Review by Supervisor", 1], ["Report Review by Manager", 1], ["Report Review by QA", 1], ["WS sent to Client", 0], ["Report sent to Client", 1]]},ye:{t:"Year-End 31 Des",s:[["WS Review by Supervisor", 0], ["WS Review by Manager", 0], ["WS Review by EP", 0], ["WS sent to Client", 0], ["WS approved by Client", 0], ["Report Review (before fiscal) by Supervisor", 1], ["Report Review (before fiscal) by Manager", 1], ["Report Review (before fiscal) by QA", 1], ["Report Review (before fiscal) by EP", 1], ["Report Review by Supervisor", 1], ["Report Review by Manager", 1], ["Report Review by QA", 1], ["Report Review by EP", 1], ["Report Review by SP", 1], ["Report sent to Client", 1], ["Report approved by Client", 1], ["Release Report", 1]]}};
-const ST=["Belum Mulai","In Progress","Comment Open","Terkirim ke Klien","Selesai","N/A"];
-const CL={"Belum Mulai":"bg-white dark:bg-slate-800","In Progress":"bg-yellow-100 dark:bg-yellow-900/50","Comment Open":"bg-orange-200 dark:bg-orange-900/60","Terkirim ke Klien":"bg-blue-100 dark:bg-blue-900/50","Selesai":"bg-green-200 dark:bg-green-900/60","N/A":"bg-slate-200 dark:bg-slate-700 text-slate-500"};
+const ST=["Belum Mulai","In Progress","Comment Open","Selesai","N/A"];
+const CL={"Belum Mulai":"bg-white dark:bg-slate-800","In Progress":"bg-yellow-100 dark:bg-yellow-900/50","Comment Open":"bg-orange-200 dark:bg-orange-900/60","Selesai":"bg-green-200 dark:bg-green-900/60","N/A":"bg-slate-200 dark:bg-slate-700 text-slate-500"};
 const {useState,useEffect,useRef,useCallback}=React,h=React.createElement;
 const today=()=>new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
-const WT={"Belum Mulai":0,"In Progress":.25,"Comment Open":.5,"Terkirim ke Klien":.75,"Selesai":1}; // bobot progres per status (ubah di sini)
+const WT={"Belum Mulai":0,"In Progress":.25,"Comment Open":.5,"Selesai":1}; // bobot progres per status (ubah di sini)
 const pc=(d,a)=>a?Math.round(d/a*100):0;
 const empty=()=>({status:{interim:{},ye:{}},targets:{interim:{},ye:{}},log:[]});
-const norm=d=>{const e=empty();if(d&&typeof d==="object"){for(const p of["interim","ye"]){Object.assign(e.status[p],d.status&&d.status[p]);Object.assign(e.targets[p],d.targets&&d.targets[p])}if(Array.isArray(d.log))e.log=d.log}return e};
+const norm=d=>{const e=empty();if(d&&typeof d==="object"){for(const p of["interim","ye"]){Object.assign(e.status[p],d.status&&d.status[p]);Object.assign(e.targets[p],d.targets&&d.targets[p])}if(Array.isArray(d.log))e.log=d.log.map(l=>{const ws=l.ws||(l.w?[l.w]:[]);return{...l,cs:l.cs||(l.c?[l.c]:[]),ws,ack:l.ack||Object.fromEntries(ws.map(w=>[w,"lama"]))}})}return e};
 let AUTH=null;
-async function call(body){const r=await fetch(URL_API,{method:"POST",body:JSON.stringify({u:AUTH&&AUTH.u,k:AUTH&&AUTH.k,...body})}),tx=(await r.text()).trim();let j;
+let VER=false;
+async function call(body){
+ if(!VER){let why="";
+  try{const r0=await fetch(URL_API),tx0=(await r0.text()).trim();
+   if(tx0[0]==="<")why="Google mengirim halaman HTML, bukan data: akses deployment belum 'Anyone', izin belum disetujui, atau URL/deployment salah.";
+   else{let j0=null;try{j0=JSON.parse(tx0)}catch(x){}if(!j0||j0.error!=="gunakan POST")why="Apps Script yang aktif masih versi lama: tempel Code.gs terbaru, lalu Deploy > Manage deployments > New version."}}
+  catch(x){why="Tidak bisa menghubungi Apps Script (jaringan, ekstensi pemblokir, atau URL salah)."}
+  if(why)throw new Error(why+" Tidak ada data yang dikirim.");VER=true}
+ const r=await fetch(URL_API,{method:"POST",body:JSON.stringify({u:AUTH&&AUTH.u,k:AUTH&&AUTH.k,...body})}),tx=(await r.text()).trim();let j;
  try{j=JSON.parse(tx)}catch(x){throw new Error("Respons bukan JSON - cek deployment & versi Apps Script (akses: Anyone)")}
  if(!j.ok)throw new Error(j.error==="auth"?"AUTH":({locked:"Terkunci sementara (terlalu banyak percobaan salah), coba lagi 10 menit",has_pin:"PIN sudah dibuat. Muat ulang halaman lalu masuk dengan PIN tersebut.",short:"PIN minimal 6 karakter"}[j.error]||j.error||"Gagal"));return j}
 async function load(){return norm((await call({action:"get"})).data)}
@@ -30,8 +38,14 @@ const btn2="rounded-lg bg-slate-200 dark:bg-slate-700 px-3 py-2 font-semibold te
 const Bar=({l,p,x})=>h("div",{className:"mt-2"},h("div",{className:"flex justify-between gap-2 text-sm"},h("span",null,l),h("b",{className:"whitespace-nowrap"},p+"%",x||"")),h("div",{className:"h-2 rounded bg-slate-200 dark:bg-slate-700 overflow-hidden"},h("i",{className:"block h-full bg-green-500",style:{width:p+"%"}})));
 const Modal=({title,onClose,children})=>h("div",{className:"fixed inset-0 z-30 bg-black/50 flex items-end sm:items-center justify-center",onClick:e=>e.target===e.currentTarget&&onClose()},h("div",{className:"bg-slate-50 dark:bg-slate-900 w-full sm:max-w-xl max-h-[90vh] overflow-auto rounded-t-2xl sm:rounded-2xl p-4"},h("button",{className:btn2+" float-right",onClick:onClose},"Tutup"),h("b",null,title),children));
 
+const MultiPick=({items,sel,onChange,noSearch})=>{const[q,setQ]=useState("");const shown=items.filter(i=>i.l.toLowerCase().includes(q.toLowerCase()));
+ const tog=v=>onChange(sel.includes(v)?sel.filter(x=>x!==v):[...sel,v]);
+ return h("div",{className:"mb-2"},
+  h("div",{className:"flex items-center gap-3 text-xs mb-1"},h("b",null,sel.length+" dipilih"),h("button",{type:"button",className:"underline",onClick:()=>onChange([...new Set([...sel,...shown.map(i=>i.v)])])},"Pilih semua"+(q?" yang tampil":"")),h("button",{type:"button",className:"underline",onClick:()=>onChange([])},"Kosongkan")),
+  !noSearch&&h("input",{className:inp+" !mb-1",placeholder:"Cari…",value:q,onChange:e=>setQ(e.target.value)}),
+  h("div",{className:"max-h-44 overflow-auto rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800"},shown.map(i=>h("label",{key:i.v,className:"flex items-center gap-2 px-2 py-1.5 border-b border-slate-100 dark:border-slate-700 text-sm"},h("input",{type:"checkbox",checked:sel.includes(i.v),onChange:()=>tog(i.v)}),i.l))))};
 function App({user,onOut}){
- const[D,setD]=useState(empty()),[ph,setPh]=useState("interim"),[tab,setTab]=useState("sum"),[q,setQ]=useState(""),[flt,setFlt]=useState(""),[cur,setCur]=useState(null),[fm,setFm]=useState(null),[lf,setLf]=useState("Open"),[sync,setSync]=useState("loading"),[err,setErr]=useState(""),[at,setAt]=useState(null),[dl,setDl]=useState(null),[pm,setPm]=useState(null);
+ const[D,setD]=useState(empty()),[ph,setPh]=useState("interim"),[tab,setTab]=useState("sum"),[q,setQ]=useState(""),[flt,setFlt]=useState(""),[cur,setCur]=useState(null),[fm,setFm]=useState(null),[lf,setLf]=useState("Open"),[sync,setSync]=useState("loading"),[err,setErr]=useState(""),[at,setAt]=useState(null),[dl,setDl]=useState(null),[pm,setPm]=useState(null),[lm,setLm]=useState("");
  const muts=useRef([]),qu=useRef(Promise.resolve()),busy=useRef(0);
  const flush=()=>{qu.current=qu.current.then(async()=>{const b=muts.current.splice(0);if(!b.length)return;busy.current++;setSync("saving");
   try{const f=await load(),n=b.reduce((s,m)=>m(s),f);await save(n);if(!muts.current.length)setD(n);setSync("ok");setAt(new Date())}
@@ -39,11 +53,16 @@ function App({user,onOut}){
  const commit=m=>{setD(p=>m(norm(JSON.parse(JSON.stringify(p)))));muts.current.push(m);flush()};
  const refresh=useCallback(async()=>{if(muts.current.length||busy.current)return;setSync("loading");try{const d=await load();if(!muts.current.length&&!busy.current)setD(d);setSync("ok");setAt(new Date())}catch(e){setSync("err");setErr(e.message||"Gagal terhubung");if(e.message==="AUTH")onOut("PIN tidak valid lagi. Silakan masuk ulang.")}},[]);
  useEffect(()=>{refresh();const t=setInterval(()=>muts.current.length?flush():refresh(),15000);return()=>clearInterval(t)},[]);
- const S=PH[ph].s,val=(e,i)=>D.status[ph][e.c+"_"+i]||(S[i][1]&&e.k==="Worksheet Saja"?"N/A":"Belum Mulai");
+ const S=PH[ph].s,val=(e,i)=>{const v=D.status[ph][e.c+"_"+i];return v==="Terkirim ke Klien"?"In Progress":v||(S[i][1]&&e.k==="Worksheet Saja"?"N/A":"Belum Mulai")};
  const agg=(list,i)=>{let d=0,a=0,n=0;list.forEach(e=>(i==null?S.map((_,j)=>j):[i]).forEach(j=>{const v=val(e,j);if(v!=="N/A"){a++;d+=WT[v]||0;if(v==="Selesai")n++}}));return[d,a,n]};
  const setStat=(e,i,v)=>{const k=e.c+"_"+i,p=ph;commit(s=>{s.status[p][k]=v;return s})};
  const setTgt=(i,v)=>{const p=ph;commit(s=>{s.targets[p]["s"+i]=v;return s})};
- const addLog=()=>{if(!fm.n.trim())return;const o={id:"l"+Date.now()+Math.random().toString(36).slice(2,6),ph:fm.ph,c:fm.c,i:fm.i,w:fm.w,d:fm.d,n:fm.n.trim(),by:user,st:"Open",cd:""};setFm(null);commit(s=>{if(!s.log.some(l=>l.id===o.id))s.log.push(o);return s})};
+ const addLog=()=>{if(!fm.n.trim())return setFm({...fm,err:"Isi poin review dahulu"});if(!fm.cs.length)return setFm({...fm,err:"Pilih minimal 1 entitas"});if(!fm.ws.length)return setFm({...fm,err:"Pilih minimal 1 orang yang mengerjakan"});
+  const f={...fm,n:fm.n.trim(),cs:E.map(e=>e.c).filter(c=>fm.cs.includes(c)),ws:[...WL().filter(w=>fm.ws.includes(w)),...fm.ws.filter(w=>!WL().includes(w))]};setFm(null);
+  if(f.id)commit(s=>{const x=s.log.find(l=>l.id===f.id);if(!x)return s;const ch=x.n!==f.n||x.i!==f.i||x.ph!==f.ph||JSON.stringify(x.cs)!==JSON.stringify(f.cs);
+   x.ack=Object.fromEntries(Object.entries(x.ack||{}).filter(([k])=>!ch&&f.ws.includes(k)));if(f.ws.includes(user))x.ack[user]=new Date().toISOString();Object.assign(x,{ph:f.ph,cs:f.cs,i:f.i,ws:f.ws,d:f.d,n:f.n,ed:user+" · "+today()});delete x.c;delete x.w;return s});
+  else{const o={id:"l"+Date.now()+Math.random().toString(36).slice(2,6),ph:f.ph,cs:f.cs,i:f.i,ws:f.ws,d:f.d,n:f.n,by:user,st:"Open",cd:"",ack:f.ws.includes(user)?{[user]:new Date().toISOString()}:{}};commit(s=>{if(!s.log.some(l=>l.id===o.id))s.log.push(o);return s})}};
+ const ackLog=ids=>{const tm=new Date().toISOString();commit(s=>{s.log.forEach(x=>{if(ids.includes(x.id)){x.ack=x.ack||{};x.ack[user]=tm}});return s})};
  const togLog=l=>{const st=l.st==="Open"?"Closed":"Open",cd=st==="Closed"?today():"";commit(s=>{const x=s.log.find(y=>y.id===l.id);if(x){x.st=st;x.cd=cd}return s})};
  const delLog=id=>{if(dl!==id){setDl(id);return}setDl(null);commit(s=>{s.log=s.log.filter(x=>x.id!==id);return s})};
  const chPin=async()=>{if(pm.n.length<6)return setPm({...pm,m:"PIN minimal 6 karakter"});if(pm.n!==pm.c)return setPm({...pm,m:"Konfirmasi tidak sama"});
@@ -53,6 +72,9 @@ function App({user,onOut}){
  const dot={loading:"bg-slate-400",saving:"bg-yellow-400 animate-pulse",ok:"bg-green-500",err:"bg-red-500"}[sync];
  const tabs=[["sum","Ringkasan"],["pt","Daftar PT"],["log","Log Review"]];
  const openLog=D.log.filter(l=>l.st==="Open").length;
+ const mine=D.log.filter(l=>l.st==="Open"&&l.ws.includes(user)&&!(l.ack||{})[user]);
+ useEffect(()=>{document.title=(mine.length?"("+mine.length+") ":"")+"Monitoring Audit LK Grup 2026"},[mine.length]);
+ const banner=mine.length>0&&h("div",{className:card+" !bg-amber-50 dark:!bg-amber-900/30 !border-amber-300 text-sm flex items-center justify-between gap-2"},h("span",null,"🔔 "+mine.length+" review comment ditujukan kepada Anda dan belum dibaca"),h("span",{className:"flex gap-1 shrink-0"},h("button",{className:btn2,onClick:()=>{setTab("log");setLm("unread")}},"Lihat"),h("button",{className:btn2,onClick:()=>ackLog(mine.map(l=>l.id))},"Tandai dibaca")));
  let body;
  if(tab==="sum"){
   const[d,a]=agg(E);let co=0;E.forEach(e=>S.forEach((_,i)=>{if(val(e,i)==="Comment Open")co++}));
@@ -70,9 +92,24 @@ function App({user,onOut}){
   body=h("div",null,h("input",{className:inp,placeholder:"Cari kode / nama PT",value:q,onChange:e=>setQ(e.target.value)}),h("select",{className:inp,value:flt,onChange:e=>setFlt(e.target.value)},opts.map(o=>h("option",{key:o[0],value:o[0]},o[1]))),
    list.map(([e,ix])=>{const[d,a,nn]=agg([e]);return h("div",{key:e.c,className:card+" cursor-pointer",onClick:()=>setCur(ix)},h("div",{className:"flex justify-between gap-2"},h("b",null,e.c+" · "+e.n),h("span",{className:"text-[11px] rounded-full bg-slate-200 dark:bg-slate-700 px-2 h-fit whitespace-nowrap"},e.k)),h("div",{className:"text-xs text-slate-500"},"Mgr "+e.m+" · Spv "+e.s+" · Sr "+e.sn+" · As "+e.a),h(Bar,{l:"",p:pc(d,a),x:" ("+nn+"/"+a+" selesai)"}))}),!list.length&&h("p",{className:"text-slate-500"},"Tidak ada hasil."));
  }else{
-  const a=D.log.filter(l=>lf===""||l.st===lf).sort((x,y)=>x.d<y.d?-1:1);
-  body=h("div",null,h("div",{className:"flex gap-2 mt-2"},h("button",{className:btn,onClick:()=>setFm({ph,c:E[0].c,i:0,w:WL()[0],d:today(),n:""})},"+ Tambah"),h("select",{className:inp+" !mb-0",value:lf,onChange:e=>setLf(e.target.value)},["Open","Closed",""].map(v=>h("option",{key:v,value:v},v||"Semua")))),
-   a.map(l=>{const p=PH[l.ph]||PH.interim,s=p.s[l.i];return h("div",{key:l.id,className:card},h("div",{className:"flex justify-between gap-2"},h("b",null,l.c+" · "+p.t),h("span",{className:"text-[11px] rounded-full px-2 h-fit whitespace-nowrap "+(l.st==="Open"?CL["Comment Open"]:CL["Selesai"])},l.st+" · "+age(l)+" hr")),h("div",{className:"text-xs text-slate-500"},(s?s[0]:"")+" · "+l.w+" · "+l.d+(l.by?" · dicatat "+l.by:"")),h("p",{className:"my-2 whitespace-pre-wrap"},l.n),h("button",{className:btn2+" mr-2",onClick:()=>togLog(l)},l.st==="Open"?"Tandai Closed":"Buka kembali"),h("button",{className:btn2,onClick:()=>delLog(l.id)},dl===l.id?"Yakin hapus?":"Hapus"))}),!a.length&&h("p",{className:"text-slate-500 mt-3"},"Belum ada entri."));
+  const a=D.log.filter(l=>(lf===""||l.st===lf)&&(lm===""||(l.ws.includes(user)&&(lm==="me"||(l.st==="Open"&&!(l.ack||{})[user]))))).sort((x,y)=>x.d<y.d?-1:1);
+  const ents=l=>l.cs.length>3?l.cs.slice(0,3).join(", ")+" +"+(l.cs.length-3)+" lainnya":l.cs.join(", ");
+  body=h("div",null,
+   h("div",{className:"flex gap-2 mt-2"},h("button",{className:btn+" shrink-0",onClick:()=>setFm({id:null,ph,cs:[],i:0,ws:[],d:today(),n:"",err:""})},"+ Tambah"),
+    h("select",{className:inp+" !mb-0",value:lf,onChange:e=>setLf(e.target.value)},["Open","Closed",""].map(v=>h("option",{key:v,value:v},v||"Semua status"))),
+    h("select",{className:inp+" !mb-0",value:lm,onChange:e=>setLm(e.target.value)},[["","Semua"],["me","Untuk saya"],["unread","Untuk saya (belum dibaca)"]].map(([v,x])=>h("option",{key:v,value:v},x)))),
+   a.map(l=>{const p=PH[l.ph]||PH.interim,s=p.s[l.i],unread=l.st==="Open"&&l.ws.includes(user)&&!(l.ack||{})[user];
+    return h("div",{key:l.id,className:card+(unread?" ring-2 ring-amber-400":"")},
+     h("div",{className:"flex justify-between gap-2"},h("b",null,ents(l)+" · "+p.t),h("span",{className:"text-[11px] rounded-full px-2 h-fit whitespace-nowrap "+(l.st==="Open"?CL["Comment Open"]:CL["Selesai"])},l.st+" · "+age(l)+" hr")),
+     h("div",{className:"text-xs text-slate-500"},(s?s[0]:"")+" · "+l.d+(l.by?" · dicatat "+l.by:"")+(l.ed?" · diedit "+l.ed:"")),
+     h("div",{className:"text-xs mt-1"},"Dikerjakan oleh: "+l.ws.map(w=>w+((l.ack||{})[w]?" ✓":"")).join(", ")+" (✓ = sudah dibaca)"),
+     h("p",{className:"my-2 whitespace-pre-wrap"},l.n),
+     h("div",{className:"flex flex-wrap gap-2"},
+      unread&&h("button",{className:btn,onClick:()=>ackLog([l.id])},"Tandai dibaca"),
+      h("button",{className:btn2,onClick:()=>setFm({id:l.id,ph:l.ph,cs:[...l.cs],i:l.i,ws:[...l.ws],d:l.d,n:l.n,err:""})},"Edit"),
+      h("button",{className:btn2,onClick:()=>togLog(l)},l.st==="Open"?"Tandai Closed":"Buka kembali"),
+      h("button",{className:btn2,onClick:()=>delLog(l.id)},dl===l.id?"Yakin hapus?":"Hapus")))}),
+   !a.length&&h("p",{className:"text-slate-500 mt-3"},"Belum ada entri."));
  }
  const e=cur!=null?E[cur]:null;
  return h("div",{className:"max-w-3xl mx-auto pb-20"},
@@ -80,23 +117,24 @@ function App({user,onOut}){
    h("div",{className:"flex items-center justify-between gap-2"},h("b",{className:"text-lg"},"📊 Monitoring Audit LK Grup 2026"),h("div",{className:"flex gap-1"},h("button",{className:btn2,onClick:()=>sync==="err"&&muts.current.length?flush():refresh()},"Refresh Data"),h("button",{className:btn2,onClick:()=>onOut()},"Keluar ("+user+")"))),
    h("div",{className:"flex gap-1 bg-slate-200 dark:bg-slate-700 rounded-xl p-1 my-2"},Object.keys(PH).map(k=>h("button",{key:k,className:"flex-1 rounded-lg py-2 font-semibold text-sm "+(k===ph?"bg-white dark:bg-slate-900 text-sky-700 dark:text-sky-400 shadow":""),onClick:()=>setPh(k)},PH[k].t))),
    h("div",{className:"flex items-center gap-2 text-xs text-slate-500"},h("span",{className:"inline-block w-2.5 h-2.5 rounded-full "+dot}),lbl[sync],sync==="err"&&muts.current.length>0&&h("span",null,"(perubahan menunggu dikirim ulang)"),h("button",{className:"underline ml-auto",onClick:()=>setPm({n:"",c:"",m:""})},"Ubah PIN"))),
-  h("main",{className:"px-3"},body),
-  h("nav",{className:"fixed bottom-0 inset-x-0 flex bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 z-20"},tabs.map(([k,t])=>h("button",{key:k,className:"flex-1 py-3 font-semibold text-sm "+(tab===k?"text-sky-700 dark:text-sky-400":"text-slate-500"),onClick:()=>setTab(k)},t))),
+  h("main",{className:"px-3"},banner,body),
+  h("nav",{className:"fixed bottom-0 inset-x-0 flex bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 z-20"},tabs.map(([k,t])=>h("button",{key:k,className:"flex-1 py-3 font-semibold text-sm "+(tab===k?"text-sky-700 dark:text-sky-400":"text-slate-500"),onClick:()=>setTab(k)},k==="log"&&mine.length?t+" 🔔"+mine.length:t))),
   e&&h(Modal,{title:e.c+" · "+e.n,onClose:()=>setCur(null)},h("div",{className:"text-xs text-slate-500 mb-2"},e.k+" · Mgr "+e.m+" · Spv "+e.s+" · Sr "+e.sn+" · As "+e.a+" · "+PH[ph].t),S.map((s,i)=>{const v=val(e,i);return h("div",{key:i,className:"mb-2"},h("label",{className:"block text-sm mb-1"},(i+1)+". "+s[0]),h("select",{className:"w-full rounded-lg border border-slate-300 dark:border-slate-600 p-2 "+CL[v],value:v,onChange:ev=>setStat(e,i,ev.target.value)},ST.map(o=>h("option",{key:o,value:o},o==="N/A"?o:o+" ("+Math.round(WT[o]*100)+"%)"))))})),
-  fm&&h(Modal,{title:"Tambah review comment",onClose:()=>setFm(null)},
+  fm&&h(Modal,{title:fm.id?"Edit review comment":"Tambah review comment",onClose:()=>setFm(null)},
    h("label",{className:"block text-sm mt-2"},"Fase"),h("select",{className:inp,value:fm.ph,onChange:ev=>setFm({...fm,ph:ev.target.value,i:0})},Object.keys(PH).map(k=>h("option",{key:k,value:k},PH[k].t))),
-   h("label",{className:"block text-sm"},"Entitas"),h("select",{className:inp,value:fm.c,onChange:ev=>setFm({...fm,c:ev.target.value})},E.map(x=>h("option",{key:x.c,value:x.c},x.c+" · "+x.n))),
+   h("label",{className:"block text-sm"},"Entitas (bisa lebih dari satu)"),h(MultiPick,{items:E.map(x=>({v:x.c,l:x.c+" · "+x.n})),sel:fm.cs,onChange:v=>setFm({...fm,cs:v})}),
    h("label",{className:"block text-sm"},"Tahap review"),h("select",{className:inp,value:fm.i,onChange:ev=>setFm({...fm,i:+ev.target.value})},PH[fm.ph].s.map((s,i)=>h("option",{key:i,value:i},(i+1)+". "+s[0]))),
-   h("label",{className:"block text-sm"},"Dikerjakan oleh (Manager/Supervisor/Senior)"),h("select",{className:inp,value:fm.w,onChange:ev=>setFm({...fm,w:ev.target.value})},WL().map(x=>h("option",{key:x},x))),
+   h("label",{className:"block text-sm"},"Dikerjakan oleh (bisa lebih dari satu; tiap orang mendapat notifikasi)"),h(MultiPick,{noSearch:true,items:[...WL(),...fm.ws.filter(w=>!WL().includes(w))].map(x=>({v:x,l:x})),sel:fm.ws,onChange:v=>setFm({...fm,ws:v})}),
    h("label",{className:"block text-sm"},"Tanggal comment"),h("input",{type:"date",className:inp,value:fm.d,onChange:ev=>setFm({...fm,d:ev.target.value})}),
    h("label",{className:"block text-sm"},"Poin review / temuan"),h("textarea",{className:inp+" min-h-[90px]",value:fm.n,onChange:ev=>setFm({...fm,n:ev.target.value})}),
-   h("button",{className:btn,onClick:addLog},"Simpan")),
+   fm.err&&h("p",{className:"text-sm text-red-600 mb-2"},fm.err),
+   h("button",{className:btn,onClick:addLog},fm.id?"Simpan perubahan":"Simpan")),
   pm&&h(Modal,{title:"Ubah PIN (berlaku untuk semua pengguna)",onClose:()=>setPm(null)},
    h("input",{type:"password",className:inp+" mt-3",placeholder:"PIN baru (min. 6 karakter)",value:pm.n,onChange:ev=>setPm({...pm,n:ev.target.value})}),
    h("input",{type:"password",className:inp,placeholder:"Ulangi PIN baru",value:pm.c,onChange:ev=>setPm({...pm,c:ev.target.value})}),
    h("p",{className:"text-xs text-slate-500 mb-2"},"Perangkat lain akan diminta masuk ulang dengan PIN baru."),pm.m&&h("p",{className:"text-sm text-red-600 mb-2"},pm.m),h("button",{className:btn,onClick:chPin},"Simpan PIN")));
 }
-const USERS=["Verdi","Achmad","Andre","Jaka"];
+const USERS=[...new Set([...WL(),...E.map(e=>e.a)])];
 function Login({onIn,m0}){const[hp,setHp]=useState(null),[u,setU]=useState(USERS[0]),[k,setK]=useState(""),[k2,setK2]=useState(""),[msg,setMsg]=useState(m0||""),[bz,setBz]=useState(false);
  useEffect(()=>{AUTH=null;call({action:"status"}).then(j=>setHp(!!j.hasPin)).catch(e=>{setHp(true);setMsg(e.message)})},[]);
  const first=hp===false;
